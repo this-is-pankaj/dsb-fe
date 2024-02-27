@@ -12,7 +12,7 @@ const wrapper = mount(AppHeader)
 describe('AppHeader', () => {
   it('Should render properly', () => {
     expect(wrapper.find(selectors.logo).exists()).toBe(true)
-    expect(wrapper.find(selectors.logo).attributes('alt')).toBe('DSB logo')
+    expect(wrapper.find(selectors.logo).attributes('alt')).toBe('DSB Logo')
     expect(wrapper.findComponent({ name: 'AppNavBar' }).exists()).toBe(true)
   })
 })
