@@ -7,7 +7,16 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: HomeView,
+      meta: {
+        title: 'DSB - Dashboard',
+        metaTags: [
+          {
+            name: 'description',
+            content: 'A dashboard for quick viewing data set across federal units.'
+          }
+        ]
+      }
     },
     {
       path: '/about',
@@ -15,7 +24,16 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue')
+      component: () => import('../views/AboutView.vue'),
+      meta: {
+        title: 'DSB - About',
+        metaTags: [
+          {
+            name: 'About us',
+            content: 'Digitizing Fed Govt'
+          }
+        ]
+      }
     }
   ]
 })
