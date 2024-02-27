@@ -1,19 +1,19 @@
 <template>
   <div class="data-sets">
-    <data-card class="data-sets--card" v-for="data in dataSets" :key="data.department" :data="data">
+    <data-card class="data-sets--card" v-for="data in list" :key="data.department" :data="data" :highlight="data.department === highlightItem">
     </data-card>
   </div>
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from 'vue';
-import { makeCall } from '@/services/dashboard';
-import type { IDataSet } from '@/models/dataSets';
 import DataCard from '@/components/DataCard/DataCard.vue';
-
-const dataSets = ref<IDataSet[]>([]);
-onMounted(async () => {
-  dataSets.value = await makeCall('dataSets')
+import type { IDataSet } from '@/models/dataSets';
+interface DataSetsProps {
+  list: IDataSet[];
+  highlightItem?: string;
+}
+withDefaults(defineProps<DataSetsProps>(), {
+  highlightItem: ''
 })
 </script>
 
