@@ -22,7 +22,7 @@ withDefaults(defineProps<DataCardProps>(), {
 
 <style scoped lang="postcss">
 .data-card {
-  @apply bg-white shadow-md p-4 flex flex-row gap-4 md:flex-col items-center;
+  @apply bg-white shadow-md p-4 flex flex-row gap-4 md:flex-col items-center justify-between;
 
   &.highlight {
     @apply bg-yellow-200

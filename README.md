@@ -1,6 +1,6 @@
 # dsb-fe
 
-This is a small web application that provides a dashboard showing how many data sets as per some specific API response.
+This is a small web application that provides a dashboard showing how many data sets as per some specific API response. The minitry with highest data-set is highlighted by default whenever being displayed.
 
 ## Tech-stack
 - Vue 3
@@ -78,3 +78,16 @@ npm run test:e2e -- --debug
 ```sh
 npm run lint
 ```
+
+## Using Docker
+The project comes with a dockerfile for executing the application seamlessly on your machine. Assuming you already have Docker installed:
+
+### Build the dockerfile
+```sh
+docker build -t '<your-image-name>' .
+```
+
+### Run the image in a container
+```sh
+docker run -it -p 5173:5173 --rm --name container-name image-name
+``` 

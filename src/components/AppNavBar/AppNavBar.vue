@@ -21,7 +21,7 @@ defineProps<AppNavbarProps>()
 <style scoped lang="postcss">
 .navbar {
   &--list {
-    @apply flex gap-4 flex-col md:flex-row;
+    @apply gap-4 flex-col md:flex-row hidden md:flex;
   }
 
   &--link {

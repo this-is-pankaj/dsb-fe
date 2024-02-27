@@ -22,7 +22,7 @@ withDefaults(defineProps<DataSetsProps>(), {
   @apply flex flex-col gap-4 md:flex-row flex-wrap justify-center;
 
   &--card {
-    @apply w-80;
+    @apply w-full md:w-80;
   }
 }
 </style>
